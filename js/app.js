@@ -81,8 +81,13 @@
     if (it.encomenda) t.push(h('span', { class: 'tag enc', text: 'Sob encomenda' }));
     return t.length ? h('div', { class: 'tags' }, t) : null;
   }
-  function photo(it, alt, lazy) {
+  function photo(it, alt, lazy, big) {
     const img = h('img', { src: `img/${it.foto}.jpg`, alt, loading: lazy ? 'lazy' : null, decoding: 'async' });
+    if (big) { // mostra a miniatura na hora e troca pela foto grande quando ela chegar
+      const hi = new Image();
+      hi.onload = () => { img.src = hi.src; };
+      hi.src = `img/g/${it.foto}.jpg`;
+    }
     const done = () => img.classList.add('ok');
     if (img.complete) done(); else { img.addEventListener('load', done); img.addEventListener('error', done); }
     return h('div', { class: 'ph' }, img);
@@ -187,7 +192,7 @@
     lastFocus = document.activeElement;
     dlg.replaceChildren(
       h('button', { class: 'x', type: 'button', 'aria-label': 'Fechar', text: '×' }),
-      photo(it, it.nome, false), details(it, 'dlg-title'), togo(it));
+      photo(it, it.nome, false, true), details(it, 'dlg-title'), togo(it));
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
   }
   function closeItem() { if (dlg.open) dlg.close(); }
