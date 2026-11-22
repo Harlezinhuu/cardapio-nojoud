@@ -36,7 +36,7 @@ button,input{font:inherit;color:inherit}
 .arch::before{content:"";position:absolute;inset:0;background:var(--orange);border-radius:999px 999px 0 0;z-index:-2}
 .arch::after{content:"";position:absolute;inset:-12px -12px 0;border:2px solid var(--gold2);border-bottom:0;border-radius:999px 999px 0 0;z-index:-1;opacity:.85}
 .arch img{position:absolute;inset:12px 12px 0;width:calc(100% - 24px);height:calc(100% - 12px);object-fit:cover;object-position:50% 8%;border-radius:999px 999px 0 0}
-.band{height:30px;background:var(--navy) url(../img/ornament.png) repeat-x center/auto 30px}
+.band{height:30px;background:var(--navy) url(../img/ornament.png) repeat-x center/auto 30px;transform:scaleY(-1)}
 
 /* ---------- barra fixa ---------- */
 .bar{position:sticky;top:0;z-index:10;background:rgba(6,11,79,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,178,106,.25);transition:box-shadow .25s}
