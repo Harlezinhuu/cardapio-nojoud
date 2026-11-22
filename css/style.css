@@ -141,6 +141,7 @@ footer .frieze{margin-bottom:clamp(28px,4vw,44px)}
 .hours div:first-child{border-top:0}
 .hours span:last-child{white-space:nowrap}
 .hours .today{color:var(--orange);font-weight:600}
+.hours .exc span:last-child{color:#ffb38a;font-style:italic}
 footer .logo{width:150px}
 footer p{margin:0;font-size:15px}
 footer .small{font-size:13px;color:var(--gold2)}

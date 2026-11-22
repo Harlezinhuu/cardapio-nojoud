@@ -26,6 +26,20 @@ Tudo fica no `menu.json`. Cada prato tem este formato:
 
 Depois de mudar, atualize também o campo `atualizado` no topo do arquivo.
 
+## Horário e dias fechados
+
+Em `info.horarios` fica o horário normal de cada dia da semana (`"12:00 – 16:00"` ou `"Fechado"`).
+
+Para fechar num dia específico (feriado, limpeza, férias), adicione em `info.excecoes`:
+
+```json
+"excecoes": [
+  { "data": "2026-11-23", "texto": "Fechado para limpeza" }
+]
+```
+
+A data é no formato `AAAA-MM-DD`. O aviso aparece só na semana daquela data e some sozinho depois que ela passa.
+
 ## Publicar no GitHub Pages
 
 1. Crie um repositório (ex.: `cardapio-nojoud`) e envie estes arquivos.

@@ -78,6 +78,7 @@
     if (typeof i.instagram === 'string' && /^[A-Za-z0-9._]{1,30}$/.test(i.instagram)) out.instagram = i.instagram;
     if (Array.isArray(i.horarios) && i.horarios.length === 7 &&
         i.horarios.every(x => Array.isArray(x) && x.length === 2 && str(x[0], 12) && str(x[1], 30))) out.horarios = i.horarios;
+    out.excecoes = Array.isArray(i.excecoes) ? i.excecoes.filter(e => e && /^\d{4}-\d{2}-\d{2}$/.test(e.data) && str(e.texto, 40)).slice(0, 30) : [];
     return out;
   }
 
@@ -153,20 +154,29 @@
   /* ---------- endereço, horário e contato ---------- */
   const DIAS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   function nowSP() {
-    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'long', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
     const get = t => (parts.find(p => p.type === t) || {}).value;
-    return { dia: DIAS.indexOf(get('weekday')), min: (+get('hour')) * 60 + (+get('minute')) };
+    return { dia: DIAS.indexOf(get('weekday')), min: (+get('hour')) * 60 + (+get('minute')), y: +get('year'), m: +get('month'), d: +get('day') };
   }
+  // data (AAAA-MM-DD) daqui a k dias, no calendário de São Paulo
+  function dateIn(now, k) {
+    const t = new Date(Date.UTC(now.y, now.m - 1, now.d + k));
+    return t.toISOString().slice(0, 10);
+  }
+  const excecao = (lista, data) => (lista || []).find(e => e.data === data);
   const span = txt => { const m = /^(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})$/.exec(txt.trim()); return m ? [m[1] * 60 + +m[2], m[3] * 60 + +m[4], `${m[1]}:${m[2]}`, `${m[3]}:${m[4]}`] : null; };
-  function status(hor) {
-    const { dia, min } = nowSP();
+  function status(hor, exc) {
+    const now = nowSP(), { dia, min } = now;
     if (dia < 0) return null;
-    const hoje = span(hor[dia][1]);
+    const exHoje = excecao(exc, dateIn(now, 0));
+    const hoje = exHoje ? null : span(hor[dia][1]);
     if (hoje && min >= hoje[0] && min < hoje[1]) return { open: true, text: `Aberto agora · fecha às ${hoje[3]}` };
     if (hoje && min < hoje[0]) return { open: false, text: `Fechado agora · abre hoje às ${hoje[2]}` };
-    for (let k = 1; k <= 7; k++) {
-      const d = (dia + k) % 7, s = span(hor[d][1]);
-      if (s) return { open: false, text: `Fechado agora · abre ${k === 1 ? 'amanhã' : hor[d][0].toLowerCase()} às ${s[2]}` };
+    for (let k = 1; k <= 14; k++) {
+      const d = (dia + k) % 7;
+      if (excecao(exc, dateIn(now, k))) continue;
+      const s = span(hor[d][1]);
+      if (s) return { open: false, text: `${exHoje ? exHoje.texto + ' hoje' : 'Fechado agora'} · abre ${k === 1 ? 'amanhã' : hor[d][0].toLowerCase()} às ${s[2]}` };
     }
     return { open: false, text: 'Fechado agora' };
   }
@@ -176,11 +186,18 @@
       h('h3', { text: 'Onde estamos' }), h('p', { text: i.endereco }),
       i.maps ? h('a', { class: 'btn', href: i.maps, target: '_blank', rel: 'noopener noreferrer' }, 'Como chegar') : null));
     if (i.horarios) {
-      const st = status(i.horarios), hoje = nowSP().dia;
+      const now = nowSP(), st = status(i.horarios, i.excecoes), hoje = now.dia;
+      // para cada dia da semana, a próxima data em que ele cai (hoje inclusive) e se tem exceção
+      const rows = i.horarios.map(([d, t], k) => {
+        const ex = excecao(i.excecoes, dateIn(now, (k - hoje + 7) % 7));
+        const [, mm, dd] = ex ? ex.data.split('-') : [];
+        return h('div', { class: [k === hoje ? 'today' : '', ex ? 'exc' : ''].join(' ').trim() || null },
+          h('span', { text: ex ? `${d} (${dd}/${mm})` : d }), h('span', { text: ex ? ex.texto : t }));
+      });
       boxes.push(h('div', { class: 'info-box' },
         h('h3', { text: 'Horário' }),
         st ? h('span', { class: st.open ? 'status' : 'status closed', text: st.text }) : null,
-        h('div', { class: 'hours' }, i.horarios.map(([d, t], k) => h('div', { class: k === hoje ? 'today' : null }, h('span', { text: d }), h('span', { text: t }))))));
+        h('div', { class: 'hours' }, rows)));
     }
     if (i.telefone || i.whatsapp || i.instagram) {
       const digits = (i.telefone || '').replace(/\D/g, '');

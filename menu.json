@@ -8,7 +8,7 @@
     "horarios": [
       [
         "Segunda",
-        "Fechado"
+        "12:00 – 16:00"
       ],
       [
         "Terça",
@@ -34,6 +34,12 @@
         "Domingo",
         "Fechado"
       ]
+    ],
+    "excecoes": [
+      {
+        "data": "2026-11-23",
+        "texto": "Fechado para limpeza"
+      }
     ]
   },
   "secoes": [
