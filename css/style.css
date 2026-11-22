@@ -174,7 +174,7 @@ footer .small{font-size:13px;color:var(--gold2)}
   .card .ph{margin:10px 0 10px 10px;align-self:start;aspect-ratio:1/1.12;height:auto;border-radius:58px 58px 10px 10px}
   .body{padding:12px 14px 0}
   .body h3{font-size:21px}
-  .desc{font-size:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .desc{font-size:14px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
   .prices{padding-bottom:12px}
   .price span{font-size:14px}
   .one b{font-size:20px;padding:7px 12px 6px}

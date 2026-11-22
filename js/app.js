@@ -46,6 +46,7 @@
     if (it.viagem != null && !RX.preco.test(it.viagem)) return false;
     if (it.veg != null && !(it.veg in VEG)) return false;
     if (it.encomenda != null && typeof it.encomenda !== 'boolean') return false;
+    if (it.obs != null && !str(it.obs, 60)) return false;
     return true;
   }
   function clean(data) {
@@ -93,7 +94,7 @@
   }
   function tags(it) {
     const t = [];
-    if (it.veg) t.push(h('span', { class: 'tag' }, leaf(), VEG[it.veg]));
+    if (it.veg) t.push(h('span', { class: 'tag' }, leaf(), it.obs || VEG[it.veg]));
     if (it.encomenda) t.push(h('span', { class: 'tag enc', text: 'Sob encomenda' }));
     return t.length ? h('div', { class: 'tags' }, t) : null;
   }
@@ -137,7 +138,7 @@
       const list = h('div', { class: s.lista ? 'list reveal' : 'grid' });
       s.itens.forEach(it => {
         const i = items.length;
-        it._key = norm([it.nome, it.desc || '', ...it.precos.map(p => p[0]), s.lista ? 'bebida' : ''].join(' '));
+        it._key = norm([it.nome, it.desc || '', it.obs || '', ...it.precos.map(p => p[0]), s.lista ? 'bebida' : ''].join(' '));
         it._sec = s.id;
         items.push(it);
         list.append(s.lista ? row(it, i) : card(it, i));

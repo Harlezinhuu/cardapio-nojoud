@@ -154,7 +154,8 @@
               "89,90"
             ]
           ],
-          "veg": "troca"
+          "veg": "troca",
+          "obs": "Pode trocar o kibe cru por falafel"
         },
         {
           "nome": "Kibe Cru",
@@ -168,7 +169,7 @@
           ]
         },
         {
-          "nome": "AbdulMourad",
+          "nome": "Abdul Mourad",
           "foto": "abdulmourad",
           "desc": "Humus, babaganush e coalhada. Acompanha pão.",
           "precos": [
@@ -189,14 +190,14 @@
         {
           "nome": "Esfihas",
           "foto": "esfihas",
-          "desc": "Sabores: carne, queijo, zaatar ou verdura. Preço por unidade.",
+          "desc": "Preço por unidade.",
           "precos": [
             [
-              "Carne, zaatar ou verdura",
+              "Carne, queijo, zaatar ou verdura",
               "14,90"
             ],
             [
-              "Queijo",
+              "Queijo com zaatar ou carne com queijo",
               "16,90"
             ]
           ],
@@ -252,7 +253,7 @@
         {
           "nome": "Combo Shawarma",
           "foto": "combo-shawarma",
-          "desc": "Shawarma com batata frita e um mini refrigerante. Sabores: carne, frango, misto (carne e frango), kafta ou falafel.",
+          "desc": "Shawarma com humus ou batata frita e um mini refrigerante. Sabores: carne, frango, misto (carne e frango), kafta ou falafel.",
           "precos": [
             [
               "",
@@ -455,7 +456,8 @@
               "64,90"
             ]
           ],
-          "veg": "troca"
+          "veg": "troca",
+          "obs": "Pode trocar o contrafilé por falafel"
         },
         {
           "nome": "Ahmude",
@@ -561,7 +563,7 @@
               "59,90"
             ]
           ],
-          "veg": "sim"
+          "veg": "vegano"
         },
         {
           "nome": "William Kasseb",
