@@ -24,6 +24,7 @@
 <link rel="apple-touch-icon" href="img/icon.png">
 <link rel="preload" href="fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" imagesrcset="img/chef-480.webp 480w, img/chef-900.webp 900w" imagesizes="(max-width: 600px) 40vw, 400px">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +36,7 @@
       <h1 class="script">Cardápio</h1>
       <p class="lede">Um cantinho do Líbano pra vocês.</p>
     </div>
-    <div class="arch"><img src="img/chef.jpg" alt="A chef da Nojoud" width="538" height="717" fetchpriority="high"></div>
+    <div class="arch"><picture><source type="image/webp" srcset="img/chef-480.webp 480w, img/chef-900.webp 900w" sizes="(max-width: 600px) 40vw, 400px"><img src="img/chef.jpg" alt="A chef da Nojoud" width="538" height="717" fetchpriority="high"></picture></div>
   </div>
 </header>
 <div class="band" aria-hidden="true"></div>
@@ -57,7 +58,8 @@
   </div>
 </nav>
 
-<main id="menu" aria-live="polite"></main>
+<main id="menu"></main>
+<p class="sr" id="live" aria-live="polite"></p>
 <div class="empty" id="empty" hidden><p>Nenhum prato encontrado.</p><button type="button" id="reset">Limpar busca</button></div>
 
 <footer class="pattern">

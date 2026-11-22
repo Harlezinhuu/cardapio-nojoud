@@ -97,16 +97,19 @@
     if (it.encomenda) t.push(h('span', { class: 'tag enc', text: 'Sob encomenda' }));
     return t.length ? h('div', { class: 'tags' }, t) : null;
   }
+  const WEBP = (() => { try { return document.createElement('canvas').toDataURL('image/webp').startsWith('data:image/webp'); } catch (_) { return false; } })();
   function photo(it, alt, lazy, big) {
-    const img = h('img', { src: `img/${it.foto}.jpg`, alt, loading: lazy ? 'lazy' : null, decoding: 'async' });
+    const f = it.foto;
+    const img = h('img', { src: `img/${f}.jpg`, alt, loading: lazy ? 'lazy' : null, decoding: 'async', width: 640, height: 640 });
+    const pic = h('picture', {},
+      h('source', { type: 'image/webp', srcset: `img/w/${f}-320.webp 320w, img/w/${f}-640.webp 640w`, sizes: big ? '(max-width: 600px) 100vw, 560px' : '(max-width: 600px) 116px, (max-width: 1100px) 45vw, 300px' }),
+      img);
     if (big) { // mostra a miniatura na hora e troca pela foto grande quando ela chegar
       const hi = new Image();
-      hi.onload = () => { img.src = hi.src; };
-      hi.src = `img/g/${it.foto}.jpg`;
+      hi.onload = () => { pic.replaceChildren(h('img', { src: hi.src, alt })); };
+      hi.src = WEBP ? `img/g/${f}.webp` : `img/g/${f}.jpg`;
     }
-    const done = () => img.classList.add('ok');
-    if (img.complete) done(); else { img.addEventListener('load', done); img.addEventListener('error', done); }
-    return h('div', { class: 'ph' }, img);
+    return h('div', { class: 'ph' }, pic);
   }
   function details(it, titleId) {
     return h('div', { class: 'body' },
@@ -147,7 +150,13 @@
           h('span', { class: 'count', text: `${s.itens.length} ${s.lista ? 'opções' : 'pratos'}` })),
         list));
     });
-    if (data.info) renderInfo(data.info);
+    if (data.info) {
+      renderInfo(data.info);
+      if (data.info.horarios) setInterval(() => { // atualiza só o aviso de aberto/fechado, a cada minuto
+        const st = status(data.info.horarios, data.info.excecoes), el = $('.status');
+        if (st && el) { el.textContent = st.text; el.className = st.open ? 'status' : 'status closed'; }
+      }, 60000);
+    }
     if (data.atualizado) $('#upd').textContent = 'Preços atualizados em ' + data.atualizado + '.';
     watch();
   }
@@ -234,6 +243,7 @@
       total += n;
     });
     $('#empty').hidden = total > 0;
+    $('#live').textContent = (q || veg) ? (total ? `${total} ${total === 1 ? 'item encontrado' : 'itens encontrados'}` : 'Nenhum prato encontrado') : '';
     document.querySelectorAll('.tabs a').forEach(a => { a.hidden = !!(document.getElementById(a.dataset.s) || {}).hidden; });
   }
 

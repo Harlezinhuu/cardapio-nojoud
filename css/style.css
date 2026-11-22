@@ -32,7 +32,7 @@ button,input{font:inherit;color:inherit}
 .arch::before{content:"";position:absolute;inset:0;background:var(--orange);border-radius:999px 999px 0 0;z-index:-2}
 .arch::after{content:"";position:absolute;inset:-12px -12px 0;border:2px solid var(--gold2);border-bottom:0;border-radius:999px 999px 0 0;z-index:-1;opacity:.85}
 .arch img{position:absolute;inset:12px 12px 0;width:calc(100% - 24px);height:calc(100% - 12px);object-fit:cover;object-position:50% 8%;border-radius:999px 999px 0 0}
-.band{height:30px;background:var(--navy) url(../img/ornament.png) repeat-x center/auto 30px;transform:scaleY(-1)}
+.band{height:30px;background:var(--navy) url(../img/ornament.webp) repeat-x center/auto 30px;transform:scaleY(-1)}
 
 /* ---------- barra fixa ---------- */
 .bar{position:sticky;top:0;z-index:10;background:rgba(6,11,79,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,178,106,.25);transition:box-shadow .25s}
@@ -55,7 +55,7 @@ button,input{font:inherit;color:inherit}
 
 /* ---------- seções ---------- */
 .sec{padding:0 var(--px) clamp(40px,6vw,80px)}
-.frieze{height:clamp(64px,9vw,110px);margin:0 calc(-1 * var(--px)) clamp(18px,3vw,30px);background:url(../img/ornament.png) repeat-x center bottom/auto 100%;transform:scaleY(-1)}
+.frieze{height:clamp(64px,9vw,110px);margin:0 calc(-1 * var(--px)) clamp(18px,3vw,30px);background:url(../img/ornament.webp) repeat-x center bottom/auto 100%;transform:scaleY(-1)}
 .sec.alt .frieze{filter:brightness(.5) saturate(1.4)}
 .sec.alt{background:var(--orange);background-image:radial-gradient(120% 70% at 50% 0%,rgba(255,255,255,.14),transparent 60%)}
 .sec-head{display:grid;justify-items:center;text-align:center;margin:0 auto clamp(22px,4vw,36px);gap:2px}
@@ -71,6 +71,7 @@ button,input{font:inherit;color:inherit}
 .card:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 16px 36px rgba(4,8,60,.3)}
 .ph{position:relative;background:#eadcc0;overflow:hidden}
 .card .ph{margin:12px 12px 0;aspect-ratio:4/3;border-radius:140px 140px 10px 10px}
+.ph picture{display:block;width:100%;height:100%}
 .ph img{width:100%;height:100%;object-fit:cover}
 .body{padding:14px 18px 0;display:flex;flex-direction:column;gap:8px}
 .body h3{margin:0;font:400 25px/1.1 "DM Serif Display",serif;color:var(--navy)}
@@ -103,6 +104,8 @@ button,input{font:inherit;color:inherit}
 .row.multi .rp span{font-size:15px}
 .row b{flex:none;white-space:nowrap;font:600 18px Lora,serif;color:var(--navy)}
 
+#menu{min-height:100vh}
+#menu:has(.sec){min-height:0}
 .empty{text-align:center;color:var(--cream);padding:48px 16px 64px;font-size:17px}
 .empty button{margin-top:12px;background:var(--cream);color:var(--navy);border:0;border-radius:999px;padding:0 18px;min-height:44px;cursor:pointer;font-weight:600}
 
