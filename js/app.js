@@ -213,6 +213,7 @@
       const digits = (i.telefone || '').replace(/\D/g, '');
       boxes.push(h('div', { class: 'info-box' },
         h('h3', { text: 'Contato' }),
+        i.whatsapp ? h('p', { class: 'note', text: 'Fazemos entrega por Uber Moto. Peça pelo WhatsApp.' }) : null,
         h('dl', { class: 'contacts' },
           i.telefone ? [h('dt', { text: 'Telefone' }), h('dd', { text: i.telefone })] : null,
           i.whatsapp ? [h('dt', { text: 'WhatsApp' }), h('dd', { text: i.whatsappTxt || i.whatsapp })] : null),

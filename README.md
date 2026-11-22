@@ -12,14 +12,12 @@ Tudo fica no `menu.json`. Cada prato tem este formato:
   "foto": "humus",
   "desc": "Pasta de grão-de-bico. Acompanha pão.",
   "precos": [["", "34,90"]],
-  "viagem": "1,50",
   "veg": "sim"
 }
 ```
 
 - `foto`: nome do arquivo em `img/`, sem o `.jpg` (só letras minúsculas, números e hífen).
 - `precos`: lista de `["rótulo", "preço"]`. Com um preço só, deixe o rótulo vazio. Use sempre o formato `00,00`.
-- `viagem`: acréscimo para viagem (opcional).
 - `veg`: `vegano`, `sim` (vegetariano), `opcao` (tem opção vegetariana) ou `troca` (dá para trocar). Opcional.
 - `encomenda`: `true` para pratos sob encomenda. Opcional.
 - Na seção de bebidas (`"lista": true`) não precisa de foto.

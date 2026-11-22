@@ -133,6 +133,7 @@ footer .frieze{margin-bottom:clamp(28px,4vw,44px)}
 .info-box h3{margin:0;font:400 24px/1.1 "DM Serif Display",serif;color:var(--cream)}
 .info-box p{margin:0;font-size:16px}
 .btns{display:flex;flex-wrap:wrap;gap:8px}
+.info-box .note{font-size:15px;color:var(--gold2)}
 .contacts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
 .contacts dt{color:var(--gold2);font-size:14px;align-self:center}
 .contacts dd{margin:0;white-space:nowrap}
