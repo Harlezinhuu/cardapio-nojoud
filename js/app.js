@@ -124,13 +124,12 @@
         list.append(s.lista ? row(it, i) : card(it, i));
       });
       menu.append(h('section', { class: 'sec ' + (si % 2 ? 'alt' : 'pattern'), id: s.id, 'aria-labelledby': 'h-' + s.id },
+        h('div', { class: 'frieze', 'aria-hidden': 'true' }),
         h('div', { class: 'sec-head' },
-          h('img', { class: 'orn', src: 'img/ornament.png', alt: '', width: 443, height: 171, loading: 'lazy' }),
           s.ar ? h('span', { class: 'ar', lang: 'ar', text: s.ar }) : null,
           h('h2', { id: 'h-' + s.id, text: s.nome }),
           h('span', { class: 'count', text: `${s.itens.length} ${s.lista ? 'opções' : 'pratos'}` })),
-        list,
-        h('div', { class: 'band', 'aria-hidden': 'true' })));
+        list));
     });
     if (data.atualizado) $('#upd').textContent = 'Preços atualizados em ' + data.atualizado + '.';
     watch();
