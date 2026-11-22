@@ -1,0 +1,732 @@
+{
+  "restaurante": "Nojoud Restaurante Árabe",
+  "atualizado": "Novembro de 2026",
+  "secoes": [
+    {
+      "id": "entradas",
+      "nome": "Entradas",
+      "ar": "مقبلات",
+      "itens": [
+        {
+          "nome": "Humus",
+          "foto": "humus",
+          "desc": "Pasta de grão-de-bico. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "34,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "sim"
+        },
+        {
+          "nome": "Humus Especial",
+          "foto": "humus-especial",
+          "desc": "Pasta de grão-de-bico com carne temperada à moda árabe. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "Babaganush",
+          "foto": "babaganush",
+          "desc": "Pasta de berinjela com molho de tahine. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "34,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "sim"
+        },
+        {
+          "nome": "Coalhada Especial",
+          "foto": "coalhada-especial",
+          "desc": "Pasta à base de leite com tomates especiais e temperos. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "48,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "Coalhada Seca",
+          "foto": "coalhada-seca",
+          "desc": "Pasta à base de leite. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "34,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "Batata Frita",
+          "foto": "batata-frita",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "34,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "vegano"
+        },
+        {
+          "nome": "Fatush",
+          "foto": "fatush",
+          "desc": "Alface, tomate, cebola, pepino, pimentão, cenoura e especiarias árabes.",
+          "precos": [
+            [
+              "",
+              "36,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "sim"
+        },
+        {
+          "nome": "Tabule",
+          "foto": "tabule",
+          "desc": "Salsinha, tomate, cebola, trigo e hortelã, temperados com limão.",
+          "precos": [
+            [
+              "",
+              "34,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "sim"
+        },
+        {
+          "nome": "Verão do Líbano",
+          "foto": "verao-do-libano",
+          "desc": "Kibe cru, humus, babaganush, coalhada seca e tabule. Acompanha cebola, hortelã e pão.",
+          "precos": [
+            [
+              "",
+              "89,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "troca"
+        },
+        {
+          "nome": "Kibe Cru",
+          "foto": "kibe-cru",
+          "desc": "200 g. Acompanha cebola, hortelã e pão árabe.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "AbdulMourad",
+          "foto": "abdulmourad",
+          "desc": "Humus, babaganush e coalhada. Acompanha pão.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "2,00",
+          "veg": "sim"
+        }
+      ]
+    },
+    {
+      "id": "lanches",
+      "nome": "Esfihas e Lanches",
+      "ar": "معجنات وسندويشات",
+      "itens": [
+        {
+          "nome": "Esfihas",
+          "foto": "esfihas",
+          "desc": "Sabores: carne, queijo, zaatar ou verdura. Preço por unidade.",
+          "precos": [
+            [
+              "Carne, zaatar ou verdura",
+              "14,90"
+            ],
+            [
+              "Queijo",
+              "16,90"
+            ]
+          ],
+          "viagem": "2,00",
+          "veg": "opcao"
+        },
+        {
+          "nome": "Kibe Frito",
+          "foto": "kibe-frito",
+          "desc": "Preço por unidade.",
+          "precos": [
+            [
+              "",
+              "14,90"
+            ]
+          ],
+          "viagem": "2,00"
+        },
+        {
+          "nome": "Shawarma",
+          "foto": "shawarma",
+          "desc": "Sabores: carne, frango, misto (carne e frango), kafta ou falafel.",
+          "precos": [
+            [
+              "",
+              "28,90"
+            ]
+          ],
+          "viagem": "1,00",
+          "veg": "opcao"
+        },
+        {
+          "nome": "Kebab do Jorjão",
+          "foto": "kebab-do-jorjao",
+          "desc": "Lanche no pão saj. Sabores: carne, frango, misto (carne e frango), kafta ou falafel.",
+          "precos": [
+            [
+              "Frango ou falafel",
+              "42,90"
+            ],
+            [
+              "Carne, kafta ou misto",
+              "45,90"
+            ],
+            [
+              "Frango ou falafel, com humus ou batata frita",
+              "64,90"
+            ],
+            [
+              "Carne, kafta ou misto, com humus ou batata frita",
+              "66,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "opcao"
+        },
+        {
+          "nome": "Combo Shawarma",
+          "foto": "combo-shawarma",
+          "desc": "Shawarma com batata frita e um mini refrigerante. Sabores: carne, frango, misto (carne e frango), kafta ou falafel.",
+          "precos": [
+            [
+              "",
+              "48,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "opcao"
+        },
+        {
+          "nome": "Araes",
+          "foto": "araes",
+          "desc": "Pão com carne temperada à moda árabe, prensado na chapa.",
+          "precos": [
+            [
+              "",
+              "37,90"
+            ],
+            [
+              "Com queijo",
+              "39,90"
+            ]
+          ],
+          "viagem": "1,00"
+        },
+        {
+          "nome": "Beirute",
+          "foto": "beirute",
+          "desc": "Carne: carne, tomate, cebola, alface, maionese e ovo. Frango: frango, tomate, cebola, alface e maionese.",
+          "precos": [
+            [
+              "Carne",
+              "76,90"
+            ],
+            [
+              "Frango",
+              "72,90"
+            ]
+          ],
+          "viagem": "3,00"
+        },
+        {
+          "nome": "Lahem bi Ajein",
+          "foto": "lahem-bi-ajein",
+          "desc": "Esfiha grande nos sabores carne ou queijo.",
+          "precos": [
+            [
+              "Um sabor",
+              "29,90"
+            ],
+            [
+              "Dois sabores",
+              "33,90"
+            ]
+          ],
+          "viagem": "1,00"
+        },
+        {
+          "nome": "Shawarma no Prato",
+          "foto": "shawarma-no-prato",
+          "desc": "Carne ou frango, alface, tomate, cebola, salsinha, picles, pasta de alho e tahine. Acompanha pão e batata frita.",
+          "precos": [
+            [
+              "",
+              "54,90"
+            ]
+          ],
+          "viagem": "2,50"
+        },
+        {
+          "nome": "Falafel no Prato",
+          "foto": "falafel-no-prato",
+          "desc": "Seis bolinhos de falafel (grão-de-bico) com especiarias. Acompanha pão e salada.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "1,00",
+          "veg": "sim"
+        },
+        {
+          "nome": "Xixtauk Karkar",
+          "foto": "xixtauk-karkar",
+          "desc": "Frango com temperos da chef, cebola e tomate. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "1,00"
+        },
+        {
+          "nome": "Barca da Nojoud",
+          "foto": "barca-da-nojoud",
+          "desc": "Esfiha em formato de canoa. Grande: 3 sabores. Média: 2 sabores.",
+          "precos": [
+            [
+              "Grande",
+              "79,90"
+            ],
+            [
+              "Média",
+              "68,90"
+            ]
+          ],
+          "viagem": "3,00"
+        }
+      ]
+    },
+    {
+      "id": "tradicionais",
+      "nome": "Tradicionais",
+      "ar": "أطباق تقليدية",
+      "itens": [
+        {
+          "nome": "Charuto de Uva",
+          "foto": "charuto-de-uva",
+          "desc": "Dez charutos de folha de uva (ou couve) recheados com carne e especiarias. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "48,90"
+            ]
+          ],
+          "viagem": "1,00"
+        },
+        {
+          "nome": "Charuto de Repolho",
+          "foto": "charuto-de-repolho",
+          "desc": "Oito charutos de folha de repolho recheados com carne e especiarias. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "44,90"
+            ]
+          ],
+          "viagem": "1,00"
+        },
+        {
+          "nome": "Michui",
+          "foto": "michui",
+          "desc": "Misto: 1 espeto de contrafilé, 1 de frango, 1 de kafta e 1 de tomate com cebola. Frango: 3 espetos de frango e 1 de tomate com cebola. Kafta: 4 espetos de kafta e 1 de tomate com cebola. Todos acompanham pão, pimenta e alho da Nojoud.",
+          "precos": [
+            [
+              "Misto",
+              "49,90"
+            ],
+            [
+              "Frango",
+              "46,90"
+            ],
+            [
+              "Kafta",
+              "56,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "Mansif",
+          "foto": "mansif",
+          "desc": "Arroz com carne moída, frango e castanhas salteadas na manteiga. Acompanha salada.",
+          "precos": [
+            [
+              "",
+              "68,90"
+            ]
+          ],
+          "viagem": "1,50"
+        },
+        {
+          "nome": "Mjadara Especial",
+          "foto": "mjadara-especial",
+          "desc": "Arroz com lentilha e cebola frita, com 3 espetos de kafta (70 g). Acompanha salada.",
+          "precos": [
+            [
+              "",
+              "68,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "veg": "troca"
+        },
+        {
+          "nome": "Sujuk",
+          "foto": "sujuk",
+          "desc": "Tripa de cordeiro recheada de arroz com carne moída e especiarias.",
+          "precos": [
+            [
+              "",
+              "68,90"
+            ]
+          ],
+          "viagem": "1,50",
+          "encomenda": true
+        }
+      ]
+    },
+    {
+      "id": "combinados",
+      "nome": "Combinados Especiais",
+      "ar": "أطباق مشكّلة",
+      "itens": [
+        {
+          "nome": "Kamel",
+          "foto": "kamel",
+          "desc": "2 espetos de contrafilé (70 g), arroz, salada e humus. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "64,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Ahmude",
+          "foto": "ahmude",
+          "desc": "3 charutos de repolho, 3 charutos de uva, 3 bolinhos de falafel e humus. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "64,90"
+            ]
+          ],
+          "viagem": "3,00"
+        },
+        {
+          "nome": "Yuri Kasseb",
+          "foto": "yuri-kasseb",
+          "desc": "2 mini esfihas de carne, 2 mini kibes, babaganush e humus. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "62,90"
+            ]
+          ],
+          "viagem": "3,00"
+        },
+        {
+          "nome": "Deyala",
+          "foto": "deyala",
+          "desc": "2 espetos de kafta (70 g), arroz, salada e humus. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "62,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Jean Makdissi",
+          "foto": "jean-makdissi",
+          "desc": "2 espetos de frango (70 g), tabule e humus. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "59,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Celine Mourad",
+          "foto": "celine-mourad",
+          "desc": "Kibe assado, babaganush, coalhada seca e salada de pepino.",
+          "precos": [
+            [
+              "",
+              "58,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Khouri",
+          "foto": "khouri",
+          "desc": "3 espetos de kafta, berinjelas assadas na chapa, arroz e salada. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "64,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Claudete Ibrahim",
+          "foto": "claudete-ibrahim",
+          "desc": "2 espetos de kafta, berinjelas assadas na chapa e salada. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "59,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Fauze Ibrahim",
+          "foto": "fauze-ibrahim",
+          "desc": "Uma esfiha de zaatar especial e um shawarma de frango.",
+          "precos": [
+            [
+              "",
+              "49,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "troca"
+        },
+        {
+          "nome": "Aziza",
+          "foto": "aziza",
+          "desc": "3 bolinhos de falafel, tabule, arroz e humus.",
+          "precos": [
+            [
+              "",
+              "59,90"
+            ]
+          ],
+          "viagem": "3,00",
+          "veg": "sim"
+        },
+        {
+          "nome": "William Kasseb",
+          "foto": "william-kasseb",
+          "desc": "Kibe cru, humus, coalhada e 3 bolinhos de falafel. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "89,90"
+            ]
+          ],
+          "viagem": "3,00"
+        },
+        {
+          "nome": "Chucre",
+          "foto": "chucre",
+          "desc": "Kibe cru, humus, coalhada, babaganush, tabule, batata frita, 2 espetos de kafta (70 g) e 2 espetos de frango (70 g). Acompanha arroz e pão árabe.",
+          "precos": [
+            [
+              "",
+              "214,90"
+            ]
+          ],
+          "viagem": "5,00"
+        },
+        {
+          "nome": "Nojoud",
+          "foto": "nojoud",
+          "desc": "Kibe cru, coalhada, humus, tabule e 3 bolinhos de falafel. 1 espeto de kafta, 1 de frango, 1 de contrafilé e 1 de tomate com cebola. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "199,90"
+            ]
+          ],
+          "viagem": "5,00"
+        },
+        {
+          "nome": "Lamiss",
+          "foto": "lamiss",
+          "desc": "3 mini kibes, 3 charutos de repolho, 3 charutos de uva, tabule, babaganush e humus. 1 espeto de kafta, 1 de contrafilé, 1 de frango e 1 de tomate com cebola. Acompanha pão árabe.",
+          "precos": [
+            [
+              "",
+              "199,90"
+            ]
+          ],
+          "viagem": "5,00"
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nome": "Bebidas",
+      "ar": "مشروبات",
+      "lista": true,
+      "itens": [
+        {
+          "nome": "Refrigerante lata",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "7,90"
+            ]
+          ]
+        },
+        {
+          "nome": "Coca-Cola KS",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "8,90"
+            ]
+          ]
+        },
+        {
+          "nome": "H2OH!",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "8,90"
+            ]
+          ]
+        },
+        {
+          "nome": "Refrigerante 600 ml",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "10,90"
+            ]
+          ]
+        },
+        {
+          "nome": "Suco de limão",
+          "desc": "",
+          "precos": [
+            [
+              "Copo",
+              "13,90"
+            ],
+            [
+              "Jarra",
+              "26,90"
+            ]
+          ]
+        },
+        {
+          "nome": "Suco de abacaxi",
+          "desc": "",
+          "precos": [
+            [
+              "Copo",
+              "14,90"
+            ],
+            [
+              "Jarra",
+              "28,90"
+            ]
+          ]
+        },
+        {
+          "nome": "Água",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "4,00"
+            ]
+          ]
+        },
+        {
+          "nome": "Água com gás",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "5,00"
+            ]
+          ]
+        },
+        {
+          "nome": "Água com gás e limão espremido",
+          "desc": "",
+          "precos": [
+            [
+              "",
+              "6,00"
+            ]
+          ]
+        },
+        {
+          "nome": "Café árabe no bule",
+          "desc": "",
+          "precos": [
+            [
+              "Bule pequeno",
+              "34,90"
+            ],
+            [
+              "Bule médio",
+              "39,90"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

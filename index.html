@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cardápio Nojoud</title>
+<meta name="description" content="Cardápio do Nojoud Restaurante Árabe: entradas, esfihas e lanches, pratos tradicionais, combinados e bebidas.">
+<meta name="theme-color" content="#060b4f">
+<link rel="icon" href="img/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preload" href="fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="cover pattern">
+  <div class="cover-in">
+    <div class="cover-text">
+      <img class="logo" src="img/logo.png" alt="Nojoud Restaurante Árabe" width="321" height="223">
+      <h1 class="script">Cardápio</h1>
+      <p class="lede">Um cantinho do Líbano pra vocês.</p>
+      <nav class="quick" id="quick" aria-label="Atalhos"></nav>
+    </div>
+    <div class="arch"><img src="img/chef.jpg" alt="A chef da Nojoud" width="538" height="717" fetchpriority="high"></div>
+  </div>
+</header>
+<div class="band" aria-hidden="true"></div>
+
+<nav class="bar" id="bar" aria-label="Seções do cardápio">
+  <div class="bar-in">
+    <div class="tabs" id="tabs"></div>
+    <div class="tools">
+      <label class="search">
+        <span class="sr">Buscar no cardápio</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="q" type="search" placeholder="Buscar prato" autocomplete="off" enterkeyhint="search" maxlength="40">
+        <button class="clear" id="clear" type="button" aria-label="Limpar busca" hidden>×</button>
+      </label>
+      <button class="chip" id="veg" type="button" aria-pressed="false" title="Mostrar só opções vegetarianas">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#leaf"/></svg>Veg
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="menu" aria-live="polite"></main>
+<div class="empty" id="empty" hidden><p>Nenhum prato encontrado.</p><button type="button" id="reset">Limpar busca</button></div>
+
+<footer class="pattern">
+  <div class="foot-in">
+    <img class="logo" src="img/logo.png" alt="Nojoud Restaurante Árabe" width="321" height="223" loading="lazy">
+    <p>Pedidos para viagem têm o acréscimo indicado em cada prato. Preços em reais.</p>
+    <p class="small" id="upd"></p>
+  </div>
+</footer>
+
+<button class="top" id="top" type="button" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+
+<svg class="sr" aria-hidden="true"><symbol id="leaf" viewBox="0 0 24 24"><path d="M20 3C10 3 4 8.5 4 15.5c0 1.6.4 3 1 4.2L3.3 21.4l1.3 1.3 1.8-1.8C7.6 21.6 9 22 10.5 22 17 22 21 15 20 3Zm-9.5 16c-.9 0-1.8-.2-2.6-.6 2.2-3.3 5.2-6.3 8.6-8.4-3.9 1.4-7.2 4.3-9.6 7.6-.3-.7-.4-1.5-.4-2.3C6.5 10.4 10.8 6.4 18 5.1c.3 8.2-3 13.9-7.5 13.9Z"/></symbol></svg>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
