@@ -143,9 +143,10 @@ footer .small{font-size:13px;color:var(--gold2)}
 /* ---------- celular ---------- */
 @media(max-width:600px){
   html{scroll-padding-top:122px}
-  .cover-in{grid-template-columns:minmax(0,1fr) minmax(0,.82fr);padding:22px 16px 0;gap:14px}
-  .cover-text{gap:8px;padding-bottom:22px}
-  .lede{font-size:14px}
+  .cover-in{grid-template-columns:minmax(0,1fr) minmax(0,.82fr);padding:24px 23px 0 16px;gap:16px}
+  .cover-text{gap:6px;padding-bottom:22px;justify-items:center;text-align:center}
+  .script{margin-top:0;font-size:min(13vw,56px)}
+  .lede{font-size:15px;text-wrap:balance}
   .quick{display:none}
   .arch::after{inset:-7px -7px 0}
   .arch img{inset:7px 7px 0;width:calc(100% - 14px);height:calc(100% - 7px)}
