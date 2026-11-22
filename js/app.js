@@ -51,6 +51,7 @@
   function clean(data) {
     if (!data || !Array.isArray(data.secoes)) throw new Error('menu.json inválido');
     return {
+      info: cleanInfo(data.info),
       atualizado: str(data.atualizado, 40) ? data.atualizado : '',
       secoes: data.secoes
         .filter(s => s && RX.id.test(s.id || '') && str(s.nome, 60) && Array.isArray(s.itens))
@@ -65,6 +66,19 @@
         }))
         .filter(s => s.itens.length)
     };
+  }
+
+  function cleanInfo(i) {
+    if (!i || typeof i !== 'object') return null;
+    const out = {};
+    if (str(i.endereco, 120)) out.endereco = i.endereco;
+    if (typeof i.maps === 'string' && i.maps.length < 300 && i.maps.startsWith('https://www.google.com/maps/')) out.maps = i.maps;
+    if (typeof i.telefone === 'string' && /^[\d\s()+-]{8,20}$/.test(i.telefone)) out.telefone = i.telefone;
+    if (typeof i.whatsapp === 'string' && /^\d{10,13}$/.test(i.whatsapp)) out.whatsapp = i.whatsapp;
+    if (typeof i.instagram === 'string' && /^[A-Za-z0-9._]{1,30}$/.test(i.instagram)) out.instagram = i.instagram;
+    if (Array.isArray(i.horarios) && i.horarios.length === 7 &&
+        i.horarios.every(x => Array.isArray(x) && x.length === 2 && str(x[0], 12) && str(x[1], 30))) out.horarios = i.horarios;
+    return out;
   }
 
   /* ---------- montagem ---------- */
@@ -131,8 +145,55 @@
           h('span', { class: 'count', text: `${s.itens.length} ${s.lista ? 'opções' : 'pratos'}` })),
         list));
     });
+    if (data.info) renderInfo(data.info);
     if (data.atualizado) $('#upd').textContent = 'Preços atualizados em ' + data.atualizado + '.';
     watch();
+  }
+
+  /* ---------- endereço, horário e contato ---------- */
+  const DIAS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  function nowSP() {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'long', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const get = t => (parts.find(p => p.type === t) || {}).value;
+    return { dia: DIAS.indexOf(get('weekday')), min: (+get('hour')) * 60 + (+get('minute')) };
+  }
+  const span = txt => { const m = /^(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})$/.exec(txt.trim()); return m ? [m[1] * 60 + +m[2], m[3] * 60 + +m[4], `${m[1]}:${m[2]}`, `${m[3]}:${m[4]}`] : null; };
+  function status(hor) {
+    const { dia, min } = nowSP();
+    if (dia < 0) return null;
+    const hoje = span(hor[dia][1]);
+    if (hoje && min >= hoje[0] && min < hoje[1]) return { open: true, text: `Aberto agora · fecha às ${hoje[3]}` };
+    if (hoje && min < hoje[0]) return { open: false, text: `Fechado agora · abre hoje às ${hoje[2]}` };
+    for (let k = 1; k <= 7; k++) {
+      const d = (dia + k) % 7, s = span(hor[d][1]);
+      if (s) return { open: false, text: `Fechado agora · abre ${k === 1 ? 'amanhã' : hor[d][0].toLowerCase()} às ${s[2]}` };
+    }
+    return { open: false, text: 'Fechado agora' };
+  }
+  function renderInfo(i) {
+    const box = $('#info'), boxes = [];
+    if (i.endereco) boxes.push(h('div', { class: 'info-box' },
+      h('h3', { text: 'Onde estamos' }), h('p', { text: i.endereco }),
+      i.maps ? h('a', { class: 'btn', href: i.maps, target: '_blank', rel: 'noopener noreferrer' }, 'Como chegar') : null));
+    if (i.horarios) {
+      const st = status(i.horarios), hoje = nowSP().dia;
+      boxes.push(h('div', { class: 'info-box' },
+        h('h3', { text: 'Horário' }),
+        st ? h('span', { class: st.open ? 'status' : 'status closed', text: st.text }) : null,
+        h('div', { class: 'hours' }, i.horarios.map(([d, t], k) => h('div', { class: k === hoje ? 'today' : null }, h('span', { text: d }), h('span', { text: t }))))));
+    }
+    if (i.telefone || i.whatsapp || i.instagram) {
+      const digits = (i.telefone || '').replace(/\D/g, '');
+      boxes.push(h('div', { class: 'info-box' },
+        h('h3', { text: 'Contato' }),
+        i.telefone ? h('p', { text: i.telefone }) : null,
+        h('div', { class: 'btns' },
+          i.whatsapp ? h('a', { class: 'btn', href: `https://wa.me/${i.whatsapp}?text=${encodeURIComponent('Olá! Vi o cardápio e gostaria de fazer um pedido.')}`, target: '_blank', rel: 'noopener noreferrer' }, 'Pedir pelo WhatsApp') : null,
+          i.telefone ? h('a', { class: 'btn ghost', href: 'tel:+' + (digits.startsWith('55') ? digits : '55' + digits) }, 'Ligar') : null,
+          i.instagram ? h('a', { class: 'btn ghost', href: `https://instagram.com/${i.instagram}`, target: '_blank', rel: 'noopener noreferrer' }, '@' + i.instagram) : null)));
+    }
+    box.replaceChildren(...boxes);
+    box.hidden = !boxes.length;
   }
 
   /* ---------- busca e filtro ---------- */

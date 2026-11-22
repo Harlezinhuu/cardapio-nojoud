@@ -124,7 +124,23 @@ dialog[open]{animation:up .28s ease-out}
 .top svg{width:22px;height:22px}
 footer{padding:0 var(--px) 56px;color:var(--cream);text-align:center}
 footer .frieze{margin-bottom:clamp(28px,4vw,44px)}
-.foot-in{max-width:720px;margin:0 auto;display:grid;gap:14px;justify-items:center}
+.foot-in{max-width:min(var(--max),1040px);margin:0 auto;display:grid;gap:16px;justify-items:center}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;width:100%;text-align:left;margin:10px 0 8px}
+.info-box{background:rgba(255,255,255,.06);border:1px solid rgba(217,178,106,.35);border-radius:20px;padding:20px 22px;display:grid;gap:12px;align-content:start}
+.info-box h3{margin:0;font:400 24px/1.1 "DM Serif Display",serif;color:var(--cream)}
+.info-box p{margin:0;font-size:16px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--cream);color:var(--navy);font-weight:600;font-size:15px;text-decoration:none;justify-self:start;transition:background .2s}
+.btn:hover{background:var(--orange)}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(251,237,196,.45)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.status{justify-self:start;font-size:14px;padding:4px 12px;border-radius:999px;background:#2f7a3d;color:#fff}
+.status.closed{background:rgba(255,255,255,.12);color:var(--cream)}
+.hours{display:grid;font-size:15px}
+.hours div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-top:1px dashed rgba(217,178,106,.25)}
+.hours div:first-child{border-top:0}
+.hours span:last-child{white-space:nowrap}
+.hours .today{color:var(--orange);font-weight:600}
 footer .logo{width:150px}
 footer p{margin:0;font-size:15px}
 footer .small{font-size:13px;color:var(--gold2)}
