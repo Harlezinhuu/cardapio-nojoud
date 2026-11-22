@@ -75,6 +75,7 @@
     if (typeof i.maps === 'string' && i.maps.length < 300 && i.maps.startsWith('https://www.google.com/maps/')) out.maps = i.maps;
     if (typeof i.telefone === 'string' && /^[\d\s()+-]{8,20}$/.test(i.telefone)) out.telefone = i.telefone;
     if (typeof i.whatsapp === 'string' && /^\d{10,13}$/.test(i.whatsapp)) out.whatsapp = i.whatsapp;
+    if (typeof i.whatsapp_exibicao === 'string' && /^[\d\s()+-]{8,20}$/.test(i.whatsapp_exibicao)) out.whatsappTxt = i.whatsapp_exibicao;
     if (typeof i.instagram === 'string' && /^[A-Za-z0-9._]{1,30}$/.test(i.instagram)) out.instagram = i.instagram;
     if (Array.isArray(i.horarios) && i.horarios.length === 7 &&
         i.horarios.every(x => Array.isArray(x) && x.length === 2 && str(x[0], 12) && str(x[1], 30))) out.horarios = i.horarios;
@@ -203,11 +204,13 @@
       const digits = (i.telefone || '').replace(/\D/g, '');
       boxes.push(h('div', { class: 'info-box' },
         h('h3', { text: 'Contato' }),
-        i.telefone ? h('p', { text: i.telefone }) : null,
+        h('dl', { class: 'contacts' },
+          i.telefone ? [h('dt', { text: 'Telefone' }), h('dd', { text: i.telefone })] : null,
+          i.whatsapp ? [h('dt', { text: 'WhatsApp' }), h('dd', { text: i.whatsappTxt || i.whatsapp })] : null),
         h('div', { class: 'btns' },
-          i.whatsapp ? h('a', { class: 'btn', href: `https://wa.me/${i.whatsapp}?text=${encodeURIComponent('Olá! Vi o cardápio e gostaria de fazer um pedido.')}`, target: '_blank', rel: 'noopener noreferrer' }, 'Pedir pelo WhatsApp') : null,
+          i.whatsapp ? h('a', { class: 'btn wa', href: `https://wa.me/${i.whatsapp}?text=${encodeURIComponent('Olá! Vi o cardápio e gostaria de fazer um pedido.')}`, target: '_blank', rel: 'noopener noreferrer' }, 'Pedir pelo WhatsApp') : null,
           i.telefone ? h('a', { class: 'btn ghost', href: 'tel:+' + (digits.startsWith('55') ? digits : '55' + digits) }, 'Ligar') : null,
-          i.instagram ? h('a', { class: 'btn ghost', href: `https://instagram.com/${i.instagram}`, target: '_blank', rel: 'noopener noreferrer' }, '@' + i.instagram) : null)));
+          i.instagram ? h('a', { class: 'btn ghost', href: `https://www.instagram.com/${i.instagram}/`, target: '_blank', rel: 'noopener noreferrer' }, 'Instagram') : null)));
     }
     box.replaceChildren(...boxes);
     box.hidden = !boxes.length;

@@ -130,6 +130,11 @@ footer .frieze{margin-bottom:clamp(28px,4vw,44px)}
 .info-box h3{margin:0;font:400 24px/1.1 "DM Serif Display",serif;color:var(--cream)}
 .info-box p{margin:0;font-size:16px}
 .btns{display:flex;flex-wrap:wrap;gap:8px}
+.contacts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
+.contacts dt{color:var(--gold2);font-size:14px;align-self:center}
+.contacts dd{margin:0;white-space:nowrap}
+.btn.wa{background:#25d366;color:#06301a}
+.btn.wa:hover{background:#1fbf5b}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--cream);color:var(--navy);font-weight:600;font-size:15px;text-decoration:none;justify-self:start;transition:background .2s}
 .btn:hover{background:var(--orange)}
 .btn.ghost{background:transparent;color:var(--cream);border:1px solid rgba(251,237,196,.45)}
