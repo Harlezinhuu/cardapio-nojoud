@@ -1,6 +1,5 @@
 Fontes sob a SIL Open Font License 1.1 (ver OFL.txt):
 - DM Serif Display
 - Lora
-- Pinyon Script
 - Amiri
 Obtidas via Fontsource (fontsource.org).
