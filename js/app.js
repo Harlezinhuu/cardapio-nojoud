@@ -130,7 +130,8 @@
           s.ar ? h('span', { class: 'ar', lang: 'ar', text: s.ar }) : null,
           h('h2', { id: 'h-' + s.id, text: s.nome }),
           h('span', { class: 'count', text: `${s.itens.length} ${s.lista ? 'opções' : 'pratos'}` })),
-        list));
+        list,
+        h('div', { class: 'band', 'aria-hidden': 'true' })));
     });
     if (data.atualizado) $('#upd').textContent = 'Preços atualizados em ' + data.atualizado + '.';
     watch();
