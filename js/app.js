@@ -112,10 +112,9 @@
   }
 
   function render(data) {
-    const menu = $('#menu'), tabs = $('#tabs'), quick = $('#quick');
+    const menu = $('#menu'), tabs = $('#tabs');
     data.secoes.forEach((s, si) => {
       tabs.append(h('a', { href: '#' + s.id, 'data-s': s.id, text: s.nome }));
-      quick.append(h('a', { href: '#' + s.id, text: s.nome }));
       const list = h('div', { class: s.lista ? 'list reveal' : 'grid' });
       s.itens.forEach(it => {
         const i = items.length;
