@@ -47,6 +47,27 @@ O golpe mais comum em restaurante é **colar um QR falso por cima do verdadeiro*
 - Não coloque `<script>`, links ou HTML nos textos: o site mostra como texto mesmo, mas é bom manter limpo.
 - Depois de publicar, abra o site no celular e confira.
 
+## Vigia (alertas automáticos)
+
+O repositório tem um robô no GitHub Actions (`.github/workflows/vigia.yml`) que:
+
+- **avisa a cada mudança** na branch `main`: quem enviou, o que mudou e o link. Um *force push* chega como alerta vermelho;
+- **confere o site a cada 30 minutos**: se está no ar, se o HTTPS é válido e se o que está publicado é igual ao repositório;
+- **lembra** quando o repositório está perto de 60 dias sem commits, porque nesse ponto o GitHub pausa verificações agendadas.
+
+Quando a checagem falha, o GitHub também manda e-mail para o dono da conta.
+
+### Ligar os alertas no Discord
+
+1. No Discord, crie um canal (ex.: `#vigia-cardapio`) num servidor seu.
+2. Configurações do canal → **Integrações** → **Webhooks** → **Novo webhook** → **Copiar URL do webhook**.
+3. No GitHub: **Settings → Secrets and variables → Actions → New repository secret**.
+   - Name: `DISCORD_WEBHOOK`
+   - Secret: a URL copiada.
+4. Em **Actions → Vigia do cardápio → Run workflow**, rode um teste. Deve chegar "✅ Vigia funcionando" no canal.
+
+A URL do webhook é um segredo: quem tiver ela consegue mandar mensagens no canal. Nunca coloque no código.
+
 ## Limites conhecidos
 
 O GitHub Pages não deixa configurar cabeçalhos HTTP. Por isso a proteção contra o site ser exibido dentro de outro (`frame-ancestors`) não pode ser ativada. Como o site não tem login nem botão de ação, o risco é praticamente nenhum. Se um dia quiser, dá para colocar o Cloudflare (grátis) na frente para adicionar esses cabeçalhos.

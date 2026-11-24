@@ -1,0 +1,40 @@
+name: Vigia do cardápio
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "7,37 * * * *"   # a cada 30 minutos
+  workflow_dispatch:          # botão "Run workflow" para testar
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vigia-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  aviso-de-mudanca:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Avisar no Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python3 .github/scripts/vigia.py push
+
+  checagem:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir site, HTTPS e conteúdo
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python3 .github/scripts/vigia.py check
