@@ -1,0 +1,644 @@
+{
+ "en": {
+  "ui": {
+   "titulo": "Menu",
+   "lede": "A little corner of Lebanon for you.",
+   "buscar": "Search",
+   "buscar_label": "Search the menu",
+   "limpar": "Clear search",
+   "veg": "Veg",
+   "veg_title": "Show vegetarian options only",
+   "idioma": "Language",
+   "secoes_nav": "Menu sections",
+   "pratos": "{n} dishes",
+   "opcoes": "{n} options",
+   "vazio": "No dishes found.",
+   "resetar": "Clear search",
+   "achados": "{n} items found",
+   "achado": "1 item found",
+   "tag_vegano": "Vegan",
+   "tag_sim": "Vegetarian",
+   "tag_opcao": "Vegetarian option",
+   "tag_troca": "Can be made vegan or vegetarian",
+   "tag_encomenda": "Order in advance",
+   "fechar": "Close",
+   "topo": "Back to top",
+   "onde": "Where to find us",
+   "como_chegar": "Directions",
+   "horario": "Opening hours",
+   "contato": "Contact",
+   "telefone": "Phone",
+   "whatsapp": "WhatsApp",
+   "entrega": "We deliver via Uber Moto. Order on WhatsApp.",
+   "pedir": "Order on WhatsApp",
+   "ligar": "Call",
+   "instagram": "Instagram",
+   "wa_msg": "Hello! I saw the menu and would like to place an order.",
+   "dias": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "fechado": "Closed",
+   "aberto_agora": "Open now · closes at {h}",
+   "fechado_hoje_abre": "Closed now · opens today at {h}",
+   "fechado_abre_amanha": "Closed now · opens tomorrow at {h}",
+   "fechado_abre_dia": "Closed now · opens {d} at {h}",
+   "excecao_hoje": "Closed today · opens {quando} at {h}",
+   "amanha": "tomorrow",
+   "fechado_agora": "Closed now",
+   "excecao": "Closed",
+   "precos": "Prices in Brazilian reais (R$).",
+   "atualizado": "Prices updated: {d}.",
+   "atualizado_valor": "November 2026",
+   "falha": "Could not load the menu. Please reload the page."
+  },
+  "secoes": {
+   "entradas": "Starters",
+   "lanches": "Esfihas & Sandwiches",
+   "tradicionais": "Traditional Dishes",
+   "combinados": "Special Combos",
+   "bebidas": "Drinks"
+  },
+  "itens": {
+   "humus": {
+    "nome": "Hummus",
+    "desc": "Chickpea dip. Served with bread."
+   },
+   "humus-especial": {
+    "nome": "Hummus with Meat",
+    "desc": "Chickpea dip topped with Arabic-style seasoned meat. Served with bread."
+   },
+   "babaganush": {
+    "nome": "Baba Ghanoush",
+    "desc": "Eggplant dip with tahini sauce. Served with bread."
+   },
+   "coalhada-especial": {
+    "nome": "Special Labneh",
+    "desc": "Strained yogurt with special tomatoes and spices. Served with bread."
+   },
+   "coalhada-seca": {
+    "nome": "Labneh",
+    "desc": "Strained yogurt dip. Served with bread."
+   },
+   "batata-frita": {
+    "nome": "French Fries",
+    "desc": ""
+   },
+   "fatush": {
+    "nome": "Fattoush",
+    "desc": "Lettuce, tomato, onion, cucumber, bell pepper, carrot and Arabic spices."
+   },
+   "tabule": {
+    "nome": "Tabbouleh",
+    "desc": "Parsley, tomato, onion, bulgur and mint, dressed with lemon."
+   },
+   "verao-do-libano": {
+    "nome": "Lebanese Summer",
+    "desc": "Raw kibbeh, hummus, baba ghanoush, labneh and tabbouleh. Served with onion, mint and bread.",
+    "obs": "Raw kibbeh can be swapped for falafel"
+   },
+   "kibe-cru": {
+    "nome": "Raw Kibbeh (Kibbeh Nayyeh)",
+    "desc": "200 g. Served with onion, mint and pita bread."
+   },
+   "abdulmourad": {
+    "nome": "Abdul Mourad",
+    "desc": "Hummus, baba ghanoush and labneh. Served with bread."
+   },
+   "esfihas": {
+    "nome": "Esfihas",
+    "desc": "Price per piece.",
+    "rotulos": [
+     "Meat, cheese, za'atar or greens",
+     "Cheese with za'atar or meat with cheese"
+    ]
+   },
+   "kibe-frito": {
+    "nome": "Fried Kibbeh",
+    "desc": "Price per piece."
+   },
+   "shawarma": {
+    "nome": "Shawarma",
+    "desc": "Fillings: beef, chicken, mixed (beef and chicken), kafta or falafel."
+   },
+   "kebab-do-jorjao": {
+    "nome": "Jorjão's Kebab",
+    "desc": "Wrapped in saj bread. Fillings: beef, chicken, mixed (beef and chicken), kafta or falafel.",
+    "rotulos": [
+     "Chicken or falafel",
+     "Beef, kafta or mixed",
+     "Chicken or falafel, with hummus or fries",
+     "Beef, kafta or mixed, with hummus or fries"
+    ]
+   },
+   "combo-shawarma": {
+    "nome": "Shawarma Combo",
+    "desc": "Shawarma with hummus or fries and a mini soda. Fillings: beef, chicken, mixed (beef and chicken), kafta or falafel."
+   },
+   "araes": {
+    "nome": "Arayes",
+    "desc": "Bread stuffed with Arabic-style seasoned meat, pressed on the griddle.",
+    "rotulos": [
+     "Classic",
+     "With cheese"
+    ]
+   },
+   "beirute": {
+    "nome": "Beirute Sandwich",
+    "desc": "Beef: beef, tomato, onion, lettuce, mayonnaise and egg. Chicken: chicken, tomato, onion, lettuce and mayonnaise.",
+    "rotulos": [
+     "Beef",
+     "Chicken"
+    ]
+   },
+   "lahem-bi-ajein": {
+    "nome": "Lahm bi Ajeen",
+    "desc": "Large flatbread pie with meat or cheese.",
+    "rotulos": [
+     "One flavor",
+     "Two flavors"
+    ]
+   },
+   "shawarma-no-prato": {
+    "nome": "Shawarma Plate",
+    "desc": "Beef or chicken, lettuce, tomato, onion, parsley, pickles, garlic sauce and tahini. Served with bread and fries."
+   },
+   "falafel-no-prato": {
+    "nome": "Falafel Plate",
+    "desc": "Six spiced chickpea falafel balls. Served with bread and salad."
+   },
+   "xixtauk-karkar": {
+    "nome": "Shish Taouk Karkar",
+    "desc": "Chicken with the chef's spices, onion and tomato. Served with pita bread."
+   },
+   "barca-da-nojoud": {
+    "nome": "Nojoud Boat",
+    "desc": "Boat-shaped esfiha. Large: 3 flavors. Medium: 2 flavors.",
+    "rotulos": [
+     "Large",
+     "Medium"
+    ]
+   },
+   "charuto-de-uva": {
+    "nome": "Stuffed Grape Leaves",
+    "desc": "Ten grape (or collard) leaves stuffed with meat and spices. Served with pita bread."
+   },
+   "charuto-de-repolho": {
+    "nome": "Stuffed Cabbage Rolls",
+    "desc": "Eight cabbage leaves stuffed with meat and spices. Served with pita bread."
+   },
+   "michui": {
+    "nome": "Mishwi (Grill)",
+    "desc": "Mixed: 1 sirloin, 1 chicken, 1 kafta and 1 tomato-and-onion skewer. Chicken: 3 chicken skewers and 1 tomato-and-onion skewer. Kafta: 4 kafta skewers and 1 tomato-and-onion skewer. All served with bread, chili and Nojoud garlic sauce.",
+    "rotulos": [
+     "Mixed",
+     "Chicken",
+     "Kafta"
+    ]
+   },
+   "mansif": {
+    "nome": "Mansaf",
+    "desc": "Rice with ground meat, chicken and nuts sautéed in butter. Served with salad."
+   },
+   "mjadara-especial": {
+    "nome": "Special Mjadara",
+    "desc": "Rice with lentils and fried onions, with 3 kafta skewers (70 g). Served with salad."
+   },
+   "sujuk": {
+    "nome": "Sujuk",
+    "desc": "Lamb casing stuffed with rice, ground meat and spices."
+   },
+   "kamel": {
+    "nome": "Kamel",
+    "desc": "2 sirloin skewers (70 g), rice, salad and hummus. Served with pita bread.",
+    "obs": "Sirloin can be swapped for falafel"
+   },
+   "ahmude": {
+    "nome": "Ahmude",
+    "desc": "3 stuffed cabbage rolls, 3 stuffed grape leaves, 3 falafel balls and hummus. Served with pita bread."
+   },
+   "yuri-kasseb": {
+    "nome": "Yuri Kasseb",
+    "desc": "2 mini meat esfihas, 2 mini kibbeh, baba ghanoush and hummus. Served with pita bread."
+   },
+   "deyala": {
+    "nome": "Deyala",
+    "desc": "2 kafta skewers (70 g), rice, salad and hummus. Served with pita bread."
+   },
+   "jean-makdissi": {
+    "nome": "Jean Makdissi",
+    "desc": "2 chicken skewers (70 g), tabbouleh and hummus. Served with pita bread."
+   },
+   "celine-mourad": {
+    "nome": "Celine Mourad",
+    "desc": "Baked kibbeh, baba ghanoush, labneh and cucumber salad."
+   },
+   "khouri": {
+    "nome": "Khouri",
+    "desc": "3 kafta skewers, griddled eggplant, rice and salad. Served with pita bread."
+   },
+   "claudete-ibrahim": {
+    "nome": "Claudete Ibrahim",
+    "desc": "2 kafta skewers, griddled eggplant and salad. Served with pita bread."
+   },
+   "fauze-ibrahim": {
+    "nome": "Fauze Ibrahim",
+    "desc": "One special za'atar esfiha and one chicken shawarma."
+   },
+   "aziza": {
+    "nome": "Aziza",
+    "desc": "3 falafel balls, tabbouleh, rice and hummus."
+   },
+   "william-kasseb": {
+    "nome": "William Kasseb",
+    "desc": "Raw kibbeh, hummus, labneh and 3 falafel balls. Served with pita bread."
+   },
+   "chucre": {
+    "nome": "Chucre",
+    "desc": "Raw kibbeh, hummus, labneh, baba ghanoush, tabbouleh, fries, 2 kafta skewers (70 g) and 2 chicken skewers (70 g). Served with rice and pita bread."
+   },
+   "nojoud": {
+    "nome": "Nojoud",
+    "desc": "Raw kibbeh, labneh, hummus, tabbouleh and 3 falafel balls. 1 kafta, 1 chicken, 1 sirloin and 1 tomato-and-onion skewer. Served with pita bread."
+   },
+   "lamiss": {
+    "nome": "Lamiss",
+    "desc": "3 mini kibbeh, 3 stuffed cabbage rolls, 3 stuffed grape leaves, tabbouleh, baba ghanoush and hummus. 1 kafta, 1 sirloin, 1 chicken and 1 tomato-and-onion skewer. Served with pita bread."
+   },
+   "Refrigerante lata": {
+    "nome": "Soda (can)",
+    "desc": ""
+   },
+   "Coca-Cola KS": {
+    "nome": "Coca-Cola KS (small glass bottle)",
+    "desc": ""
+   },
+   "H2OH!": {
+    "nome": "H2OH!",
+    "desc": ""
+   },
+   "Refrigerante 600 ml": {
+    "nome": "Soda 600 ml",
+    "desc": ""
+   },
+   "Limonada árabe": {
+    "nome": "Arabic Lemonade",
+    "desc": "",
+    "rotulos": [
+     "Glass",
+     "Pitcher"
+    ]
+   },
+   "Abacaxi com hortelã": {
+    "nome": "Pineapple with Mint",
+    "desc": "",
+    "rotulos": [
+     "Glass",
+     "Pitcher"
+    ]
+   },
+   "Água": {
+    "nome": "Still Water",
+    "desc": ""
+   },
+   "Água com gás": {
+    "nome": "Sparkling Water",
+    "desc": ""
+   },
+   "Café árabe no bule": {
+    "nome": "Arabic Coffee (pot)",
+    "desc": "",
+    "rotulos": [
+     "Small pot",
+     "Medium pot"
+    ]
+   }
+  }
+ },
+ "ar": {
+  "ui": {
+   "titulo": "قائمة الطعام",
+   "lede": "ركن صغير من لبنان لكم.",
+   "buscar": "بحث",
+   "buscar_label": "البحث في القائمة",
+   "limpar": "مسح البحث",
+   "veg": "نباتي",
+   "veg_title": "عرض الخيارات النباتية فقط",
+   "idioma": "اللغة",
+   "secoes_nav": "أقسام القائمة",
+   "pratos": "عدد الأطباق: {n}",
+   "opcoes": "عدد الخيارات: {n}",
+   "vazio": "لا توجد نتائج.",
+   "resetar": "مسح البحث",
+   "achados": "عدد النتائج: {n}",
+   "achado": "نتيجة واحدة",
+   "tag_vegano": "نباتي صرف",
+   "tag_sim": "نباتي",
+   "tag_opcao": "يوجد خيار نباتي",
+   "tag_troca": "يمكن تحضيره نباتياً",
+   "tag_encomenda": "بالطلب المسبق",
+   "fechar": "إغلاق",
+   "topo": "العودة إلى الأعلى",
+   "onde": "موقعنا",
+   "como_chegar": "الاتجاهات",
+   "horario": "ساعات العمل",
+   "contato": "تواصل معنا",
+   "telefone": "الهاتف",
+   "whatsapp": "واتساب",
+   "entrega": "نوصّل الطلبات عبر Uber Moto. اطلب عبر واتساب.",
+   "pedir": "اطلب عبر واتساب",
+   "ligar": "اتصل",
+   "instagram": "إنستغرام",
+   "wa_msg": "مرحباً! رأيت القائمة وأود أن أطلب.",
+   "dias": [
+    "الاثنين",
+    "الثلاثاء",
+    "الأربعاء",
+    "الخميس",
+    "الجمعة",
+    "السبت",
+    "الأحد"
+   ],
+   "fechado": "مغلق",
+   "aberto_agora": "مفتوح الآن · يغلق الساعة {h}",
+   "fechado_hoje_abre": "مغلق الآن · يفتح اليوم الساعة {h}",
+   "fechado_abre_amanha": "مغلق الآن · يفتح غداً الساعة {h}",
+   "fechado_abre_dia": "مغلق الآن · يفتح يوم {d} الساعة {h}",
+   "excecao_hoje": "مغلق اليوم · يفتح {quando} الساعة {h}",
+   "amanha": "غداً",
+   "fechado_agora": "مغلق الآن",
+   "excecao": "مغلق",
+   "precos": "الأسعار بالريال البرازيلي (R$).",
+   "atualizado": "آخر تحديث للأسعار: {d}.",
+   "atualizado_valor": "نوفمبر 2026",
+   "falha": "تعذّر تحميل القائمة. يرجى إعادة تحميل الصفحة."
+  },
+  "secoes": {
+   "entradas": "مقبلات",
+   "lanches": "معجنات وسندويشات",
+   "tradicionais": "أطباق تقليدية",
+   "combinados": "أطباق مشكّلة",
+   "bebidas": "مشروبات"
+  },
+  "itens": {
+   "humus": {
+    "nome": "حمص",
+    "desc": "متبّل الحمص. يقدَّم مع الخبز."
+   },
+   "humus-especial": {
+    "nome": "حمص باللحمة",
+    "desc": "حمص مع لحمة متبّلة على الطريقة العربية. يقدَّم مع الخبز."
+   },
+   "babaganush": {
+    "nome": "بابا غنوج",
+    "desc": "متبّل الباذنجان بصلصة الطحينة. يقدَّم مع الخبز."
+   },
+   "coalhada-especial": {
+    "nome": "لبنة خاصة",
+    "desc": "لبنة مع طماطم مختارة وبهارات. تقدَّم مع الخبز."
+   },
+   "coalhada-seca": {
+    "nome": "لبنة",
+    "desc": "لبنة. تقدَّم مع الخبز."
+   },
+   "batata-frita": {
+    "nome": "بطاطا مقلية",
+    "desc": ""
+   },
+   "fatush": {
+    "nome": "فتوش",
+    "desc": "خس وطماطم وبصل وخيار وفليفلة وجزر مع بهارات عربية."
+   },
+   "tabule": {
+    "nome": "تبولة",
+    "desc": "بقدونس وطماطم وبصل وبرغل ونعناع مع الليمون."
+   },
+   "verao-do-libano": {
+    "nome": "صيف لبنان",
+    "desc": "كبة نيّة وحمص وبابا غنوج ولبنة وتبولة. يقدَّم مع البصل والنعناع والخبز.",
+    "obs": "يمكن استبدال الكبة النيّة بالفلافل"
+   },
+   "kibe-cru": {
+    "nome": "كبة نيّة",
+    "desc": "200 غرام. تقدَّم مع البصل والنعناع والخبز العربي."
+   },
+   "abdulmourad": {
+    "nome": "Abdul Mourad",
+    "desc": "حمص وبابا غنوج ولبنة. يقدَّم مع الخبز."
+   },
+   "esfihas": {
+    "nome": "صفيحة وفطائر",
+    "desc": "السعر للقطعة الواحدة.",
+    "rotulos": [
+     "لحمة أو جبنة أو زعتر أو خضار",
+     "جبنة مع زعتر أو لحمة مع جبنة"
+    ]
+   },
+   "kibe-frito": {
+    "nome": "كبة مقلية",
+    "desc": "السعر للقطعة الواحدة."
+   },
+   "shawarma": {
+    "nome": "شاورما",
+    "desc": "الحشوات: لحمة، دجاج، مشكّل (لحمة ودجاج)، كفتة أو فلافل."
+   },
+   "kebab-do-jorjao": {
+    "nome": "Kebab do Jorjão",
+    "desc": "بخبز الصاج. الحشوات: لحمة، دجاج، مشكّل (لحمة ودجاج)، كفتة أو فلافل.",
+    "rotulos": [
+     "دجاج أو فلافل",
+     "لحمة أو كفتة أو مشكّل",
+     "دجاج أو فلافل، مع حمص أو بطاطا مقلية",
+     "لحمة أو كفتة أو مشكّل، مع حمص أو بطاطا مقلية"
+    ]
+   },
+   "combo-shawarma": {
+    "nome": "وجبة شاورما",
+    "desc": "شاورما مع حمص أو بطاطا مقلية ومشروب غازي صغير. الحشوات: لحمة، دجاج، مشكّل (لحمة ودجاج)، كفتة أو فلافل."
+   },
+   "araes": {
+    "nome": "عرايس",
+    "desc": "خبز محشو بلحمة متبّلة على الطريقة العربية ومحمّص على الصاج.",
+    "rotulos": [
+     "عادي",
+     "مع جبنة"
+    ]
+   },
+   "beirute": {
+    "nome": "ساندويش بيروت",
+    "desc": "لحمة: لحمة وطماطم وبصل وخس ومايونيز وبيض. دجاج: دجاج وطماطم وبصل وخس ومايونيز.",
+    "rotulos": [
+     "لحمة",
+     "دجاج"
+    ]
+   },
+   "lahem-bi-ajein": {
+    "nome": "لحم بعجين",
+    "desc": "فطيرة كبيرة باللحمة أو بالجبنة.",
+    "rotulos": [
+     "نكهة واحدة",
+     "نكهتان"
+    ]
+   },
+   "shawarma-no-prato": {
+    "nome": "صحن شاورما",
+    "desc": "لحمة أو دجاج مع خس وطماطم وبصل وبقدونس ومخلل وثوم وطحينة. يقدَّم مع الخبز والبطاطا المقلية."
+   },
+   "falafel-no-prato": {
+    "nome": "صحن فلافل",
+    "desc": "ست حبات فلافل بالبهارات. يقدَّم مع الخبز والسلطة."
+   },
+   "xixtauk-karkar": {
+    "nome": "شيش طاووق",
+    "desc": "دجاج بتتبيلة الشيف مع البصل والطماطم. يقدَّم مع الخبز العربي."
+   },
+   "barca-da-nojoud": {
+    "nome": "Barca da Nojoud",
+    "desc": "صفيحة على شكل قارب. الكبيرة: 3 نكهات. الوسط: نكهتان.",
+    "rotulos": [
+     "كبيرة",
+     "وسط"
+    ]
+   },
+   "charuto-de-uva": {
+    "nome": "ورق عنب",
+    "desc": "عشر لفائف من ورق العنب (أو الكرنب) محشوة باللحمة والبهارات. تقدَّم مع الخبز العربي."
+   },
+   "charuto-de-repolho": {
+    "nome": "محشي ملفوف",
+    "desc": "ثماني لفائف ملفوف محشوة باللحمة والبهارات. تقدَّم مع الخبز العربي."
+   },
+   "michui": {
+    "nome": "مشاوي",
+    "desc": "مشكّل: سيخ لحمة وسيخ دجاج وسيخ كفتة وسيخ طماطم وبصل. دجاج: 3 أسياخ دجاج وسيخ طماطم وبصل. كفتة: 4 أسياخ كفتة وسيخ طماطم وبصل. جميعها تقدَّم مع الخبز والحرّ وثومية نجود.",
+    "rotulos": [
+     "مشكّل",
+     "دجاج",
+     "كفتة"
+    ]
+   },
+   "mansif": {
+    "nome": "منسف",
+    "desc": "أرز مع لحمة مفرومة ودجاج ومكسرات محمّصة بالزبدة. يقدَّم مع السلطة."
+   },
+   "mjadara-especial": {
+    "nome": "مجدرة خاصة",
+    "desc": "أرز بالعدس مع البصل المقلي و3 أسياخ كفتة (70 غرام). تقدَّم مع السلطة."
+   },
+   "sujuk": {
+    "nome": "Sujuk",
+    "desc": "مصارين غنم محشوة بالأرز واللحمة المفرومة والبهارات."
+   },
+   "kamel": {
+    "nome": "Kamel",
+    "desc": "سيخان من اللحمة (70 غرام) وأرز وسلطة وحمص. يقدَّم مع الخبز العربي.",
+    "obs": "يمكن استبدال اللحمة بالفلافل"
+   },
+   "ahmude": {
+    "nome": "Ahmude",
+    "desc": "3 لفائف ملفوف و3 لفائف ورق عنب و3 حبات فلافل وحمص. يقدَّم مع الخبز العربي."
+   },
+   "yuri-kasseb": {
+    "nome": "Yuri Kasseb",
+    "desc": "2 صفيحة صغيرة باللحمة و2 كبة صغيرة وبابا غنوج وحمص. يقدَّم مع الخبز العربي."
+   },
+   "deyala": {
+    "nome": "Deyala",
+    "desc": "سيخان من الكفتة (70 غرام) وأرز وسلطة وحمص. يقدَّم مع الخبز العربي."
+   },
+   "jean-makdissi": {
+    "nome": "Jean Makdissi",
+    "desc": "سيخان من الدجاج (70 غرام) وتبولة وحمص. يقدَّم مع الخبز العربي."
+   },
+   "celine-mourad": {
+    "nome": "Celine Mourad",
+    "desc": "كبة بالصينية وبابا غنوج ولبنة وسلطة خيار."
+   },
+   "khouri": {
+    "nome": "Khouri",
+    "desc": "3 أسياخ كفتة وباذنجان مشوي على الصاج وأرز وسلطة. يقدَّم مع الخبز العربي."
+   },
+   "claudete-ibrahim": {
+    "nome": "Claudete Ibrahim",
+    "desc": "سيخان من الكفتة وباذنجان مشوي على الصاج وسلطة. يقدَّم مع الخبز العربي."
+   },
+   "fauze-ibrahim": {
+    "nome": "Fauze Ibrahim",
+    "desc": "مناقيش زعتر خاصة وشاورما دجاج."
+   },
+   "aziza": {
+    "nome": "Aziza",
+    "desc": "3 حبات فلافل وتبولة وأرز وحمص."
+   },
+   "william-kasseb": {
+    "nome": "William Kasseb",
+    "desc": "كبة نيّة وحمص ولبنة و3 حبات فلافل. يقدَّم مع الخبز العربي."
+   },
+   "chucre": {
+    "nome": "Chucre",
+    "desc": "كبة نيّة وحمص ولبنة وبابا غنوج وتبولة وبطاطا مقلية وسيخان كفتة (70 غرام) وسيخان دجاج (70 غرام). يقدَّم مع الأرز والخبز العربي."
+   },
+   "nojoud": {
+    "nome": "نجود",
+    "desc": "كبة نيّة ولبنة وحمص وتبولة و3 حبات فلافل. سيخ كفتة وسيخ دجاج وسيخ لحمة وسيخ طماطم وبصل. يقدَّم مع الخبز العربي."
+   },
+   "lamiss": {
+    "nome": "Lamiss",
+    "desc": "3 كبة صغيرة و3 لفائف ملفوف و3 لفائف ورق عنب وتبولة وبابا غنوج وحمص. سيخ كفتة وسيخ لحمة وسيخ دجاج وسيخ طماطم وبصل. يقدَّم مع الخبز العربي."
+   },
+   "Refrigerante lata": {
+    "nome": "مشروب غازي (علبة)",
+    "desc": ""
+   },
+   "Coca-Cola KS": {
+    "nome": "كوكا كولا (زجاجة صغيرة)",
+    "desc": ""
+   },
+   "H2OH!": {
+    "nome": "H2OH!",
+    "desc": ""
+   },
+   "Refrigerante 600 ml": {
+    "nome": "مشروب غازي 600 مل",
+    "desc": ""
+   },
+   "Limonada árabe": {
+    "nome": "ليموناضة عربية",
+    "desc": "",
+    "rotulos": [
+     "كوب",
+     "إبريق"
+    ]
+   },
+   "Abacaxi com hortelã": {
+    "nome": "أناناس بالنعناع",
+    "desc": "",
+    "rotulos": [
+     "كوب",
+     "إبريق"
+    ]
+   },
+   "Água": {
+    "nome": "مياه",
+    "desc": ""
+   },
+   "Água com gás": {
+    "nome": "مياه غازية",
+    "desc": ""
+   },
+   "Café árabe no bule": {
+    "nome": "قهوة عربية (ركوة)",
+    "desc": "",
+    "rotulos": [
+     "ركوة صغيرة",
+     "ركوة وسط"
+    ]
+   }
+  }
+ }
+}

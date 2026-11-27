@@ -24,7 +24,7 @@ import urllib.error
 import urllib.request
 
 SITE = os.environ.get("SITE_URL", "https://harlezinhuu.github.io/cardapio-nojoud/").rstrip("/") + "/"
-ARQUIVOS = ["index.html", "menu.json", "js/app.js", "css/style.css"]
+ARQUIVOS = ["index.html", "menu.json", "i18n.json", "js/app.js", "css/style.css"]
 WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "").strip()
 REPO_URL = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ.get('GITHUB_REPOSITORY', 'Harlezinhuu/cardapio-nojoud')}"
 RUN_URL = f"{REPO_URL}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
